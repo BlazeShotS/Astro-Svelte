@@ -1,6 +1,6 @@
 <script>
     import { untrack } from "svelte";
-    import Item from "../Svelte5.svelte/Item.svelte";
+    import Item from "../Svelte5/Item.svelte"
 
     let count = $state(0);
     let count2 = $derived(count * 2);
