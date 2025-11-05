@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import Counter from "../components/Counter.svelte"
+import Persona from "../components/Persona.svelte"
+import PersonaSnippet from "../components/PersonaSnippet.svelte"
+import ImagenSnippetDoc from "../components/ImagenSnippetDoc.svelte"
+import Reactividad from "../components/Reactividad.svelte"
+import TarjetaOverride from "../components/TarjetaOverride.svelte"
+import Formulario from "../components/Formulario.svelte"
+import Welcome from "../components/Pages/Welcome.svelte"
+
+const nombre = "Astro";
+
+---
+
+<div>
+  <h1>Hola {nombre}!</h1>
+</div>
+
+<!--
+<BaseLayout title="BIENVENIDO">
+
+	<h1>Astro</h1>
+	<h3>Esto es un pequeño parrafo: </h3>
+	<p>
+		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga molestiae at aliquam dolorum, omnis nesciunt voluptates
+		fugit quidem unde quas officiis facilis aspernatur iusto nostrum repellendus excepturi, odit corporis sint?
+	</p>
+	<p style="text-align: center;">Este es un contador</p>
+	<Counter client:visible/> <!--Astro no ejecuta js, es por eso que con client , le decimos a astro que ejecute js del lado del cliente-
+	<hr>
+	<h1>Muestra personas sin snippet:</h1>
+	<Persona client:visible />
+	<br>
+	<h1>Muestra personas con snippet:</h1>
+	<PersonaSnippet client:visible />
+
+	<h1>Imagen con snnipet:</h1>
+	<ImagenSnippetDoc client:load />
+
+	<h1>Reactividad con svelte:</h1>
+	<Reactividad client:load />
+
+	<h1>Override: </h1>
+	<TarjetaOverride client:load />
+
+	<h1>Formulario y validaciones:</h1>
+	<Formulario client:load />
+	
+</BaseLayout>
+-->
+
+<BaseLayout title="Bienvenido">
+	<Welcome client:load />
+</BaseLayout>
